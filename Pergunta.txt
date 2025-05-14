@@ -1,0 +1,5 @@
+Explique com suas palavras o funcionamento do models, controller e fale sobre endpoints no projeto.
+
+-O models cria as funções para determinar o que será criado, alterado, deletado. O controller recebe os dados que
+ são denominados la na interface e chama o models para atuar de acordo com a função que foi chamada. Os endpoints são os caminhos que são
+ possíveis acessar na aplicação, na parte 4B da aplicação é criada a página professor que tem um caminho diferente do que a dos alunos.
