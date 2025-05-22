@@ -1,22 +1,31 @@
+const Aluno = require('../models/aluno');
 const Curso = require('../models/curso');
 
-exports.create = async (req, res) => {
-  const { nome } = req.body;
-  await Curso.create(nome);
+exports.index = async (req, res) => {
+  const alunos = await Aluno.findAllComCurso();
+  const cursos = await Curso.findAll();
+  res.render('alunos/index', { alunos, cursos });
+};
+
+exports.store = async (req, res) => {
+  await Aluno.create(req.body);
   res.redirect('/alunos');
 };
 
-// Controller que recebe os dados do formulário e chama o model para atualizar o curso
 exports.update = async (req, res) => {
   const { id } = req.params;
-  const { nome } = req.body;
-  await Curso.update(id, nome);
+  await Aluno.update(id, req.body);
   res.redirect('/alunos');
 };
 
-// Controller que chama o model para deletar o curso e redireciona
-exports.delete = async (req, res) => {
+exports.destroy = async (req, res) => {
   const { id } = req.params;
-  await Curso.delete(id);
+  await Aluno.delete(id);
   res.redirect('/alunos');
+};
+
+exports.byCurso = async (req, res) => {
+  const { curso_id } = req.params;
+  const alunos = await Aluno.findByCurso(curso_id);
+  res.json(alunos);
 };
