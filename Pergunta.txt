@@ -1,25 +1,25 @@
-Explique com suas palavras o funcionamento do models, controller e fale sobre endpoints no projeto.
+1-Explique com suas palavras o funcionamento do models, controller e fale sobre endpoints no projeto.
 
 -O models cria as funções para determinar o que será criado, alterado, deletado. O controller recebe os dados que
  são denominados la na interface e chama o models para atuar de acordo com a função que foi chamada. Os endpoints são os caminhos que são
  possíveis acessar na aplicação, na parte 4B da aplicação é criada a página professor que tem um caminho diferente do que a dos alunos.
 
 
- Explique com suas palavras o papel de cada camada da arquitetura MVC usada neste projeto.
+2-Explique com suas palavras o papel de cada camada da arquitetura MVC usada neste projeto.
 Como o Model, o Controller e a View interagem entre si?
 
 -O Model cria as funções para interação com o banco de dados. O controller pega essa função executa com base nas requisições passadas. O view apresenta visual e de uma 
 maneira mais limpa o que foi alterado com base nas funções. 
 
 
-Como ocorre o envio e o recebimento de dados no formato JSON neste projeto?
+3-Como ocorre o envio e o recebimento de dados no formato JSON neste projeto?
 Cite uma rota que responde em JSON e explique seu funcionamento.
 
-O controller chama o model e passa os parâmetros, o json envia essas informações. No caso de cursoController.js, ele chama a função
+-O controller chama o model e passa os parâmetros, o json envia essas informações. No caso de cursoController.js, ele chama a função
 que lista os alunos por curso e o json é usado para repassar isso.
 
 
-Qual a importância de usar HTML básico com formulários e tabelas para organizar e manipular dados no navegador?
+4-Qual a importância de usar HTML básico com formulários e tabelas para organizar e manipular dados no navegador?
 Por que esse tipo de estrutura ainda é útil em projetos back-end com Node.js?
 
-O HTML ajuda na construção das informações para que seja intuitivo a listagem de informações, como também a sua edição ou exclusão
+-O HTML ajuda na construção das informações para que seja intuitivo a listagem de informações, como também a sua edição ou exclusão
